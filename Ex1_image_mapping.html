@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Electronic Gadgets</title> 
+    <style>
+        
+        body {
+            margin: 20px; 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; /* Increases line height for better readability */
+        }
+        header {
+            text-align: center; /* Centers the text inside the header */
+            padding: 10px; 
+            background-color: #f4f4f4; 
+            border: 1px solid #ddd; /* Light gray border around the header */
+        }
+        header h1 {
+            margin: 0; /* Removes default margin around the header text */
+        }
+        p {
+            margin: 15px 0; 
+        }
+        img {
+            display: block; /* Makes the image a block-level element */
+            margin: 0 auto; 
+            border: 1px solid #ddd; /* Adds a border around the image */
+        }
+        map area {
+            cursor: pointer; /* Changes the cursor to a pointer when hovering over image map areas */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explore Electronic Gadgets</h1> 
+    </header>
+
+    <main>
+        <p><b>Move your cursor over the image to know more about that particular component in detail.</b></p> 
+
+        <img src="electronic.jpg" alt="gadgets" usemap="#imagemaping"> 
+        <map name="imagemaping">
+            <!-- Rectangular shapes are identified like computer,camera-->
+            <area shape="rect" coords="293,22,234,57" alt="Computer" 
+                  href="https://www.amazon.in/HP-Processor-21-45-inch-Graphics-Speakers/dp/B0D6KM9W3M/ref=asc_df_B0D6KM9W3M/?tag=googleshopdes-21&linkCode=df0&hvadid=702094053743&hvpos=&hvnetw=g&hvrand=6727759039218444716&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007809&hvtargid=pla-2321739014368&psc=1&mcid=c76d4cf0a54a396e889dba59e8985c8b&gad_source=1" target="_blank">
+            <area shape="rect" coords="98,244,150,280" alt="Camera" 
+                  href="https://www.panasonic.com/in/consumer/cameras-camcorders/camera.html" target="_blank">
+            
+                  <!-- Circular shapes are identified like CD,Webcam(lens)->
+            <area shape="circle" coords="193,188,23" alt="CD" 
+                  href="https://en.wikipedia.org/wiki/Compact_disc" target="_blank">          
+            <area shape="circle" coords="272,252,18" alt="Webcam" 
+                  href="https://www.flipkart.com/laptop-accessories/webcams/pr?sid=6bo,ai3,r3e&otracker=undefined_footer_footer" target="_blank">
+            
+                  <!-- Polygonal shapes like printer,TV,Controller-->
+            <area shape="poly" coords="14,227,57,227,51,251,65,249,63,273,54,272,52,284,19,281,11,270,7,251" alt="Printer" 
+                  href="https://www.hp.com/in-en/shop/printers.html" target="_blank">
+            <area shape="poly" coords="193,188,171,180,241,172,243,152,256,152,253,171,289,172,290,209,240,208" alt="TV" 
+                  href="2nd_page.html" target="_blank">
+            <area shape="poly" coords="92,165,128,168,140,180,143,206,116,197,104,195,89,206,78,200" alt="Controller" 
+                  href="https://www.flipkart.com/rpm-euro-games-controller-wired-ps3-windows-xp-7-8-8-1-10-only-x-d-input-usb-gamepad/p/itma92e0e3d7fd11?pid=ACCFVST5YHQPHEF5&lid=LSTACCFVST5YHQPHEF5QXHFV9&marketplace=FLIPKART&store=4rr%2Fkm5%2Fr39&srno=b_1_4&otracker=browse&fm=organic&iid=651af3a3-680c-4e75-94b9-4a5a4e83a9cd.ACCFVST5YHQPHEF5.SEARCH&ppt=None&ppn=None&ssid=dm1ua3ljxc0000001724942317649" target="_blank">
+        </map>
+    </main>
+</body>
+</html>
