@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Electronic Gadgets</title> 
+    
+    <style>
+        /* Internal CSS */
+        /* Styles for the body element */
+        body {
+            margin: 20px; 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #57f5cd;
+        }
+
+        /* Styles for the header element */
+        header {
+            text-align: center; /* Center-aligns the text */
+            padding: 10px; /* Adds padding inside the header */
+            border: 1px solid #13d0e9; /* Adds a border around the header */
+        }
+
+        /* Styles for h1 elements inside the header */
+        header h1 {
+            margin: 0; /* Removes default margin */
+            font-size: 2em;
+            color: #333; 
+            text-transform: uppercase; /* Transforms text to uppercase */
+        }
+        /* Styles for img elements */
+        img {
+            display: block; /* Makes the image a block-level element */
+            margin: 20px auto; 
+            border: 2px solid #f3db05; /* Adds a border around the image */
+            border-radius: 8px; /* Rounds the corners of the image */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+        }
+
+        /* Styles for map area elements */
+        map area {
+            cursor: pointer; /* Changes the cursor to a pointer */
+        }
+
+        /* Styles for map area elements with alt attribute "Computer" */
+        map area[alt="Computer"] {
+            outline: 2px solid #007bff; /* Adds an outline */
+        }
+
+        /* Styles for map area elements with alt attribute "CD" */
+        map area[alt="CD"] {
+            outline: 2px solid #28a745; 
+        }
+
+        /* Styles for map area elements with alt attribute "Webcam" */
+        map area[alt="Webcam"] {
+            outline: 2px solid #ffc107;
+        }
+    </style>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body style="margin: 20px; font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+
+    <!-- Header section -->
+    <header style="text-align: center; padding: 10px; background-color: hsl(88, 90%, 44%); border: 1px solid #13d0e9;">
+        <h1 style="margin: 0; font-size: 2em; color: #333; text-transform: uppercase;">Explore Electronic Gadgets</h1> 
+    </header>
+
+    <main>
+        <!-- Paragraph with inline styling -->
+        <p style="margin: 15px 0; letter-spacing: 0.5px;">
+            <b style="background-color: #fa1bdc; color: #0818f7; padding: 5px; border-radius: 4px; font-weight: bold;">
+                Move your cursor over the image to know more about that particular component in detail.
+            </b>
+        </p> 
+
+        <img src="electronic.jpg" alt="gadgets" usemap="#imagemaping" style="display: block; margin: 20px auto; border: 2px solid #f3db05; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);"> 
+        
+        <map name="imagemaping">
+            <!-- Rectangular clickable areas -->
+            <area shape="rect" coords="293,22,234,57" alt="Computer" 
+                  href="https://www.amazon.in/HP-Processor-21-45-inch-Graphics-Speakers/dp/B0D6KM9W3M/ref=asc_df_B0D6KM9W3M/?tag=googleshopdes-21&linkCode=df0&hvadid=702094053743&hvpos=&hvnetw=g&hvrand=6727759039218444716&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007809&hvtargid=pla-2321739014368&psc=1&mcid=c76d4cf0a54a396e889dba59e8985c8b&gad_source=1" target="_blank" style="outline: 2px solid #007bff;">
+            <area shape="rect" coords="98,244,150,280" alt="Camera" 
+                  href="https://www.panasonic.com/in/consumer/cameras-camcorders/camera.html" target="_blank">
+
+            <!-- Circular clickable areas -->
+            <area shape="circle" coords="193,188,23" alt="CD" 
+                  href="https://en.wikipedia.org/wiki/Compact_disc" target="_blank" style="outline: 2px solid #28a745;">
+            <area shape="circle" coords="272,252,18" alt="Webcam" 
+                  href="https://www.flipkart.com/laptop-accessories/webcams/pr?sid=6bo,ai3,r3e&otracker=undefined_footer_footer" target="_blank" style="outline: 2px solid #ffc107;">
+
+            <!-- Polygonal clickable areas -->
+            <area shape="poly" coords="14,227,57,227,51,251,65,249,63,273,54,272,52,284,19,281,11,270,7,251" alt="Printer" 
+                  href="https://www.hp.com/in-en/shop/printers.html" target="_blank">
+            <area shape="poly" coords="193,188,171,180,241,172,243,152,256,152,253,171,289,172,290,209,240,208" alt="TV" 
+                  href="ex2continue.html" target="_blank">
+            <area shape="poly" coords="92,165,128,168,140,180,143,206,116,197,104,195,89,206,78,200" alt="Controller" 
+                  href="https://www.flipkart.com/rpm-euro-games-controller-wired-ps3-windows-xp-7-8-8-1-10-only-x-d-input-usb-gamepad/p/itma92e0e3d7fd11?pid=ACCFVST5YHQPHEF5&lid=LSTACCFVST5YHQPHEF5QXHFV9&marketplace=FLIPKART&store=4rr%2Fkm5%2Fr39&srno=b_1_4&otracker=browse&fm=organic&iid=651af3a3-680c-4e75-94b9-4a5a4e83a9cd.ACCFVST5YHQPHEF5.SEARCH&ppt=None&ppn=None&ssid=dm1ua3ljxc0000001724942317649" target="_blank">
+        </map>
+
+        <!--Description of the components which has image mapping-->
+        <p class="highlight"><span style="color:rgb(190, 15, 243)" class="a.custom-link:hover">Computer:</span>
+            <br>
+            <b>Description:</b> A computer is an electronic device designed to process and store data, run applications, and perform various tasks. It typically includes a monitor, CPU, keyboard, and mouse. Computers can be used for everything from browsing the internet to complex data analysis and gaming.
+        </p>    
+        <p> <span style="font-style: italic;"> Camera:</span>
+        <br>
+           <b> Description:</b> A camera is a device used to capture images or videos. It can be a digital camera, which stores pictures electronically, or a film camera, which uses photographic film. Cameras come in various types including compact, DSLR, and mirrorless, each suited for different levels of photography needs.
+        </p>
+        <p id="main-header">
+            <span style="color:blue">CD (Compact Disc):</span>
+          <br> 
+          <b>Description:</b> A compact disc (CD) is a digital optical disc storage format used to store and play music, data, or other media. CDs were once a popular medium for music and software distribution and are known for their durability and relatively high storage capacity.
+        </p>
+        <p><span style="font-size: large;">Webcam:</span>
+            <br>
+            <b>Description:</b> A webcam is a small camera connected to a computer or integrated into a device, used for video communication, recording, and streaming. Webcams are commonly used for video calls, online meetings, and live streaming.
+        </p>
+        <p><span style="color:rgb(64, 238, 20)"> Printer:</span>
+          <br> 
+          <b>Description:</b> A printer is a device that produces a physical copy of digital documents or images, typically on paper. Printers come in various types such as inkjet, laser, and thermal, each suited for different printing needs like photos, documents, or labels.
+        </p>
+        <p><span style="font-weight: bolder;">TV (Television):</span>
+           <br> 
+           <b>Description:</b> A television (TV) is an electronic device used for receiving and displaying broadcast signals, video, and audio content. Modern TVs offer high-definition and smart features, including internet connectivity and streaming capabilities.
+            <br>
+            <span style="font-family:'Times New Roman', Times, serif; color: #28a745;">Controller:</span>
+            <br>
+            <b>Description:</b> A controller is a device used to interact with video game systems. It typically features buttons, joysticks, and triggers to control in-game actions and movements, enhancing the gaming experience across various platforms.
+        </p>
+    </main>
+</body>
+</html>
 
