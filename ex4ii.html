@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Gadget World: Explore, Order, and Innovate!</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
+        h1 {
+            color: #530079;
+            margin-bottom: 20px;
+        }
+        #container {
+            display: flex;
+            align-items: center; 
+        }
+        #displayTime {
+            margin-left: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #530079;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 400px;
+            padding: 10px;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        #hoverMessage {
+            font-size: 20px;
+            cursor: pointer;
+            margin: 20px 0; 
+        }
+        .con {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto; 
+            overflow: hidden;
+        }
+        .img {
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .te {
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            color: rgb(11, 10, 10);
+            text-align: center;
+            opacity: 0; 
+            transition: opacity 0.3s ease, top 0.3s ease;
+        }
+        .con:hover .img {
+            transform: translateY(30px);
+        }
+        .con:hover .te {
+            top: 15px;
+            opacity: 1;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let bgChanged = false;
+
+            document.body.addEventListener('click', () => {
+                if (!bgChanged) {
+                    document.body.style.backgroundColor = '#E6E6FA';
+                    bgChanged = true;
+                }
+            });
+
+            let clockInterval;
+            document.getElementById('timeBtn').addEventListener('click', () => {
+                clearInterval(clockInterval);
+                showCurrentTime();
+                clockInterval = setInterval(showCurrentTime, 1000);
+            });
+
+            function showCurrentTime() {
+                const currentTime = new Date().toLocaleTimeString();
+                document.getElementById('displayTime').innerText = currentTime;
+            }
+
+            window.checkForm = (e) => {
+                const fullName = document.getElementById('fullName').value.trim();
+                const emailAddr = document.getElementById('emailAddr').value.trim();
+                const phoneNum = document.getElementById('phoneNum').value.trim();
+
+                document.querySelectorAll('.error').forEach(err => err.remove());
+
+                let validForm = true;
+
+                if (!fullName) {
+                    alert('Please enter your name');
+                    document.getElementById('fullName').focus();
+                    validForm = false;
+                } else if (!emailAddr) {
+                    alert('Email is required');
+                    document.getElementById('emailAddr').focus();
+                    validForm = false;
+                } else if (!phoneNum) {
+                    alert('Phone number is required');
+                    document.getElementById('phoneNum').focus();
+                    validForm = false;
+                }
+
+                if (!validForm) {
+                    e.preventDefault();  // Prevent submission only if the form is invalid
+                } else {
+                    alert('Form submitted successfully!');
+                }
+            };
+
+            document.querySelectorAll('input').forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (!this.value.trim()) {
+                        alert(`${this.previousElementSibling.innerText} is required!`);
+                    }
+                });
+            });
+
+            const hoverText = document.getElementById('hoverMessage');
+            hoverText.addEventListener('mouseover', () => {
+                hoverText.innerText = 'Successfully Placed your order!';
+            });
+            hoverText.addEventListener('mouseout', () => {
+                hoverText.innerText = 'Unleash the Power of Innovation!';
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>Welcome to Our Gadget Store</h1>
+    <div id="container">
+        <button id="timeBtn">Show time</button>
+        <div id="displayTime"></div>
+    </div>
+
+    <form id="myForm" onsubmit="checkForm(event)">
+        <div class="form-group">
+            <label for="fullName">Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name">
+        </div>
+    
+        <div class="form-group">
+            <label for="emailAddr">Email:</label>
+            <input type="email" id="emailAddr" name="emailAddr" placeholder="Enter your email">
+        </div>
+    
+        <div class="form-group">
+            <label for="phoneNum">Phone Number:</label>
+            <input type="tel" id="phoneNum" name="phoneNum" placeholder="Enter your phone number">
+        </div>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="hoverMessage">Unleash the Power of Innovation!</div>
+
+    <div class="con">
+        <img src="gadgets.jpg" alt="pic" class="img">
+        <div class="te">Grab your Gadgets!</div>
+    </div>
+
+</body>
+</html>
 
