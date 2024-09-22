@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Service Request Form</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+            margin: 0;
+            background-color: #f5f5f0;
+        }
+        h2 {
+            color: #00796b;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005f57;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            height: 25px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const hardwareType = document.getElementById('hardwareType').value;
+            const serviceDate = document.getElementById('serviceDate').value;
+            const yearsOwned = document.getElementById('yearsOwned').value.trim();
+            const servicedBefore = document.querySelector('input[name="servicedBefore"]:checked');
+            const servicedPart = document.getElementById('servicedPart').value.trim();
+            const currentComplaint = document.getElementById('currentComplaint').value.trim();
+            const aadhar = document.getElementById('aadhar').value.trim();
+            const proof = document.getElementById('proof').value;
+            const homeService = document.querySelector('input[name="homeService"]:checked');
+            const address = document.getElementById('address').value.trim();
+
+            if (name === '') {
+                alert('Name is required.');
+                return false;
+            }
+            if (email === '') {
+                alert('Email is required.');
+                return false;
+            }
+            if (phone === '') {
+                alert('Phone number is required.');
+                return false;
+            }
+            if (hardwareType === '') {
+                alert('Please select your hardware type.');
+                return false;
+            }
+            if (serviceDate === '') {
+                alert('Please select a preferred service date.');
+                return false;
+            }
+            if (yearsOwned === '') {
+                alert('Please specify how many years ago it was bought.');
+                return false;
+            }
+            if (!servicedBefore) {
+                alert('Please indicate if the hardware was previously serviced.');
+                return false;
+            }
+            if (servicedBefore.value === 'yes' && servicedPart === '') {
+                alert('Please specify which part was serviced.');
+                return false;
+            }
+            if (currentComplaint === '') {
+                alert('Please describe the current complaint.');
+                return false;
+            }
+            if (!homeService) {
+                alert('Please select if you require home service.');
+                return false;
+            }
+            if (homeService.value === 'yes' && address === '') {
+                alert('Please enter your address for home service.');
+                return false;
+            }
+            if (aadhar === '') {
+                alert('Aadhar number is required.');
+                return false;
+            }
+            if (proof === '') {
+                alert('Please upload your ID proof.');
+                return false;
+            }
+            alert('Form submitted successfully!');
+            return true;
+        }
+
+        function toggleAddressField() {
+            const homeService = document.querySelector('input[name="homeService"]:checked').value;
+            const addressField = document.getElementById('addressField');
+            if (homeService === 'yes') {
+                addressField.style.display = 'block';
+            } else {
+                addressField.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+<div>
+<h2>Hardware Service Request Form</h2>
+
+<form id="serviceForm" onsubmit="return validateForm()">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    </div>
+
+    <div class="form-group">
+        <label for="hardwareType">Hardware Type:</label>
+        <select id="hardwareType" name="hardwareType">
+            <option value="">Select</option>
+            <option value="laptop">Laptop</option>
+            <option value="printer">Printer</option>
+            <option value="desktop">Desktop</option>
+            <option value="scanner">Scanner</option>
+            <option value="Game Controller">Game Controller</option>
+            <option value="Television">TV</option>
+            <option value="Camera">Camera</option>
+        </select>
+    </div>
+
+    <!-- Preferred Service Date Field -->
+    <div class="form-group">
+        <label for="serviceDate">Preferred Service Date:</label>
+        <input type="date" id="serviceDate" name="serviceDate">
+    </div>
+
+    <div class="form-group">
+        <label for="yearsOwned">How many years ago was it bought?</label>
+        <input type="number" id="yearsOwned" name="yearsOwned" min="0" placeholder="Enter number of years">
+    </div>
+
+    <div class="form-group">
+        <label>Was this hardware serviced before?</label>
+        <input type="radio" name="servicedBefore" value="yes"> Yes
+        <input type="radio" name="servicedBefore" value="no"> No
+    </div>
+
+    <div class="form-group">
+        <label for="servicedPart">If yes, which part was serviced?</label>
+        <input type="text" id="servicedPart" name="servicedPart" placeholder="Enter the part that was serviced">
+    </div>
+
+    <div class="form-group">
+        <label for="currentComplaint">What is the current complaint?</label>
+        <textarea id="currentComplaint" name="currentComplaint" rows="4" placeholder="Describe the current issue"></textarea>
+    </div>
+
+    <!-- Home Service Section -->
+    <div class="form-group">
+        <label>Do you require home service?</label>
+        <input type="radio" name="homeService" value="yes" onclick="toggleAddressField()"> Yes
+        <input type="radio" name="homeService" value="no" onclick="toggleAddressField()"> No
+    </div>
+
+    <div class="form-group" id="addressField" style="display:none;">
+        <label for="address">Enter your address for home service:</label>
+        <textarea id="address" name="address" rows="4" placeholder="Enter your address"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="aadhar">Aadhar Number:</label>
+        <input type="text" id="aadhar" name="aadhar" placeholder="Enter your 12-digit Aadhar number" maxlength="12">
+    </div>
+
+    <div class="form-group">
+        <label for="proof">Please upload your ID proof:</label>
+        <input type="file" id="proof">
+    </div>
+
+    <div class="button-container">
+        <button type="submit">Submit</button>
+    </div>
+</form>
+</div>
+<br>
+<footer>
+    <p><center>© 2024 Electronic Devices Information</center></p>
+</footer>
+
+</body>
+</html>
