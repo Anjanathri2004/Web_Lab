@@ -7,4 +7,12 @@
         <servlet-name>ex5</servlet-name>
         <url-pattern>/program</url-pattern>
     </servlet-mapping>
+ <servlet>
+<servlet-name>formservlet</servlet-name>
+<servlet-class>WarrantyRegistrationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>formservlet</servlet-name>
+<url-pattern>/form</url-pattern>
+</servlet-mapping>
 </web-app>
