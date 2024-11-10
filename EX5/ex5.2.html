@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Warranty Registration Form</title>
   <style>
     body {
@@ -65,6 +66,15 @@
     .submit-btn:hover {
       background-color: #0056b3;
     }
+    #responseContainer {
+      margin-top: 20px;
+      text-align: center;
+    }
+    #receiptImage {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -103,18 +113,6 @@
       <input type="email" id="email" name="email" required>
     </div>
     
-    <!-- Warranty Duration -->
-    <div class="form-group">
-      <label for="warranty-duration">Warranty Duration</label>
-      <select id="warranty-duration" name="warranty_duration" required>
-        <option value="">Select Duration</option>
-        <option value="1_year">1 Year</option>
-        <option value="2_years">2 Years</option>
-        <option value="3_years">3 Years</option>
-        <option value="5_years">5 Years</option>
-      </select>
-    </div>
-    
     <!-- Upload Purchase Receipt -->
     <div class="form-group">
       <label for="receipt">Upload Purchase Receipt</label>
@@ -123,6 +121,8 @@
     
     <button type="submit" class="submit-btn">Submit Registration</button>
   </form>
+  
+  <div id="responseContainer"></div>
 </div>
 
 </body>
