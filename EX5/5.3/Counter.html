@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Counter</title>
+    <link rel="stylesheet" href="style_count.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Visit Counter</h1>
+        <p>Your visit count: <span id="visitCount"></span></p>
+    </div>
+    <script>
+        fetch('VisitCounterServlet')
+            .then(response => response.text())
+            .then(count => document.getElementById('visitCount').innerText = count);
+    </script>
+</body>
+</html>
