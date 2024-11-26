@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <name>Smartphone X200</name>
+        <description>High-performance smartphone with 6.7-inch display and 128GB storage.</description>
+        <price>69999</price>
+    </item>
+    <item>
+        <name>Noise-Cancelling Headphones</name>
+        <description>Wireless headphones with active noise cancellation and 30-hour battery life.</description>
+        <price>14999</price>
+    </item>
+    <item>
+        <name>Smartwatch Pro</name>
+        <description>Advanced smartwatch with heart rate monitoring and GPS.</description>
+        <price>24999</price>
+    </item>
+    <item>
+        <name>4K Smart TV</name>
+        <description>55-inch 4K UHD Smart TV with HDR and built-in streaming apps.</description>
+        <price>45999</price>
+    </item>
+    <item>
+        <name>Wireless Earbuds</name>
+        <description>Compact earbuds with crystal-clear sound and fast charging.</description>
+        <price>4999</price>
+    </item>
+    <item>
+        <name>Gaming Laptop</name>
+        <description>Powerful gaming laptop with Intel i7 processor and NVIDIA RTX 3060.</description>
+        <price>99999</price>
+    </item>
+    <item>
+        <name>Bluetooth Speaker</name>
+        <description>Portable speaker with 20W output and waterproof design.</description>
+        <price>2999</price>
+    </item>
+    <item>
+        <name>DSLR Camera</name>
+        <description>24.2 MP DSLR with 18-55mm lens and 4K video recording.</description>
+        <price>45999</price>
+    </item>
+    <item>
+        <name>Home Security Camera</name>
+        <description>Wi-Fi-enabled security camera with motion detection and night vision.</description>
+        <price>6999</price>
+    </item>
+    <item>
+        <name>Gaming Console</name>
+        <description>Next-gen console with ultra-fast SSD and immersive gaming experience.</description>
+        <price>49999</price>
+    </item>
+    <item>
+        <name>External Hard Drive</name>
+        <description>2TB portable external drive for backup and file storage.</description>
+        <price>5999</price>
+    </item>
+    <item>
+        <name>Tablet</name>
+        <description>Sleek tablet with 10.4-inch display and 64GB storage, perfect for productivity.</description>
+        <price>29999</price>
+    </item>
+    <item>
+        <name>Action Camera</name>
+        <description>4K action camera with waterproof casing and image stabilization.</description>
+        <price>14999</price>
+    </item>
+    <item>
+        <name>Wireless Keyboard</name>
+        <description>Ergonomic keyboard with Bluetooth connectivity and rechargeable battery.</description>
+        <price>2999</price>
+    </item>
+    <item>
+        <name>Power Bank</name>
+        <description>10,000mAh power bank with fast-charging support and dual USB ports.</description>
+        <price>1299</price>
+    </item>
+</menu>
