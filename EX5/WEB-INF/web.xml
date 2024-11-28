@@ -15,50 +15,14 @@
 <servlet-name>formservlet</servlet-name>
 <url-pattern>/form</url-pattern>
 </servlet-mapping>
-</web-app>
-
-
-
-
-<web-app>
-        <servlet-name>VisitCounterServlet</servlet-name>
+  <servlet-name>VisitCounterServlet</servlet-name>
         <servlet-class>VisitCounterServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>VisitCounterServlet</servlet-name>
         <url-pattern>/VisitCounterServlet</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>p12_db1</servlet-name>
-        <servlet-class>p12_db1</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>p12_db1</servlet-name>
-        <url-pattern>/db1</url-pattern>
-    </servlet-mapping>
-<!-- Program p12_db2.java -->
-    <servlet>
-        <servlet-name>p12_db2</servlet-name>
-        <servlet-class>p12_db2</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>p12_db2</servlet-name>
-        <url-pattern>/db2</url-pattern>
-    </servlet-mapping>
-
-<!-- Program p12_db3.java -->
-    <servlet>
-        <servlet-name>p12_db3</servlet-name>
-        <servlet-class>p12_db3</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>p12_db3</servlet-name>
-        <url-pattern>/db3</url-pattern>
-    </servlet-mapping>
-     <servlet>
+ <servlet>
         <servlet-name>OrderFormServlet</servlet-name>
         <servlet-class>OrderFormServlet</servlet-class>
     </servlet>
@@ -105,29 +69,5 @@
     <servlet-mapping>
         <servlet-name>URLRewritingConfirmationServlet</servlet-name>
         <url-pattern>/urlRewritingConfirmation</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>OrderServlet</servlet-name>
-        <servlet-class>OrderServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>OrderServlet</servlet-name>
-        <url-pattern>/OrderServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>LoginServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>RegisterServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
 </web-app>
