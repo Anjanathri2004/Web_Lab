@@ -12,27 +12,36 @@ public class CookiesConfirmationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String name = null, cuisine = null, quantity = null;
+        String customerName = null, gadget = null, quantity = null;
 
+        // Retrieve cookies and extract relevant data
         Cookie[] cookies = request.getCookies();
-        for (Cookie cookie : cookies) {
-            switch (cookie.getName()) {
-                case "name":
-                    name = cookie.getValue();
-                    break;
-                case "cuisine":
-                    cuisine = cookie.getValue();
-                    break;
-                case "quantity":
-                    quantity = cookie.getValue();
-                    break;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                switch (cookie.getName()) {
+                    case "customerName":
+                        customerName = cookie.getValue();
+                        break;
+                    case "gadget":
+                        gadget = cookie.getValue();
+                        break;
+                    case "quantity":
+                        quantity = cookie.getValue();
+                        break;
+                }
             }
         }
 
+        // Generate response
         response.setContentType("text/html");
         response.getWriter().println("<html><body>");
-        response.getWriter().println("<h1>Thank you, " + name + "</h1>");
-        response.getWriter().println("<p>Your order for " + quantity + " " + cuisine + " has been placed using Cookies.</p>");
+        if (customerName != null && gadget != null && quantity != null) {
+            response.getWriter().println("<h1>Thank you, " + customerName + "</h1>");
+            response.getWriter().println("<p>Your order for " + quantity + " " + gadget + "(s) has been placed using Cookies.</p>");
+        } else {
+            response.getWriter().println("<h1>Invalid Order</h1>");
+            response.getWriter().println("<p>It seems like we couldn't retrieve your order details from cookies.</p>");
+        }
         response.getWriter().println("</body></html>");
     }
 }
